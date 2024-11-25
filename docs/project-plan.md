@@ -14,7 +14,7 @@
 
 ### 🎨 Design & Layout
 #### Acties
-- [ ] Ontwerp en implementatie van heldere header met logo en slogan
+- [x] Ontwerp en implementatie van heldere header met logo en slogan
 - [x] Creatie van hero-sectie met professionele visuals
 - [ ] Implementatie van responsieve slider
 - [ ] Ontwikkeling van interactieve elementen
