@@ -15,7 +15,7 @@
 ### 🎨 Design & Layout
 #### Acties
 - [ ] Ontwerp en implementatie van heldere header met logo en slogan
-- [ ] Creatie van hero-sectie met professionele visuals
+- [x] Creatie van hero-sectie met professionele visuals
 - [ ] Implementatie van responsieve slider
 - [ ] Ontwikkeling van interactieve elementen
 
@@ -29,9 +29,9 @@ Performance: Webpack, Code splitting
 
 ### 🔧 Technische Implementatie
 #### Acties
-- [ ] Implementeren van responsive design
+- [x] Implementeren van responsive design
 - [ ] Optimalisatie van laadtijd en performance
-- [ ] SEO-vriendelijke structuur implementeren
+- [x] SEO-vriendelijke structuur implementeren
 - [ ] Integratie van CTA's
 
 #### Technische Stack
@@ -45,10 +45,10 @@ Analytics: Google Analytics
 
 ### 📝 Content Management
 #### Acties
-- [ ] Ontwikkeling van dienstbeschrijvingen
-- [ ] Creatie van prijzen/pakketten overzicht
+- [x] Ontwikkeling van dienstbeschrijvingen
+- [x] Creatie van prijzen/pakketten overzicht
 - [ ] Implementatie van uitklapbare secties
-- [ ] Toevoegen van visuals en iconen
+- [x] Toevoegen van visuals en iconen
 
 #### Technische Stack
 ```
