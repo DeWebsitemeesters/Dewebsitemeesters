@@ -6,16 +6,15 @@
 3. [Portfolio Sectie](#portfolio)
 4. [Blog/Kennisbank](#blog)
 5. [Contact Functionaliteit](#contact)
-6. [Klantenpanel](#klantenpanel)
-7. [CMS Systeem](#cms)
-8. [Technische Optimalisatie](#tech-opt)
+6. [CMS Systeem](#cms)
+7. [Technische Optimalisatie](#tech-opt)
 
 ## <a name="homepage"></a>🏠 1. Homepage Ontwikkeling
 
 ### 🎨 Design & Layout
 #### Acties
-- [x] Ontwerp en implementatie van heldere header met logo en slogan
-- [x] Creatie van hero-sectie met professionele visuals
+- [ ] Ontwerp en implementatie van heldere header met logo en slogan
+- [ ] Creatie van hero-sectie met professionele visuals
 - [ ] Implementatie van responsieve slider
 - [ ] Ontwikkeling van interactieve elementen
 
@@ -29,9 +28,9 @@ Performance: Webpack, Code splitting
 
 ### 🔧 Technische Implementatie
 #### Acties
-- [x] Implementeren van responsive design
+- [ ] Implementeren van responsive design
 - [ ] Optimalisatie van laadtijd en performance
-- [x] SEO-vriendelijke structuur implementeren
+- [ ] SEO-vriendelijke structuur implementeren
 - [ ] Integratie van CTA's
 
 #### Technische Stack
@@ -45,10 +44,10 @@ Analytics: Google Analytics
 
 ### 📝 Content Management
 #### Acties
-- [x] Ontwikkeling van dienstbeschrijvingen
-- [x] Creatie van prijzen/pakketten overzicht
+- [ ] Ontwikkeling van dienstbeschrijvingen
+- [ ] Creatie van prijzen/pakketten overzicht
 - [ ] Implementatie van uitklapbare secties
-- [x] Toevoegen van visuals en iconen
+- [ ] Toevoegen van visuals en iconen
 
 #### Technische Stack
 ```
@@ -74,9 +73,8 @@ Analytics: Google Analytics, Hotjar
 ### 📸 Galerij Functionaliteit
 #### Acties
 - [ ] Ontwikkeling van projecten galerij
-- [ ] Implementatie van filteropties
 - [ ] Creatie van lightbox weergave
-- [ ] Integratie van video functionaliteit
+
 
 #### Technische Stack
 ```
@@ -119,7 +117,6 @@ Comments: Disqus/Custom solution
 #### Acties
 - [ ] Ontwikkeling van contactformulier
 - [ ] Implementatie van Google Maps
-- [ ] Integratie van live chat
 - [ ] Setup van email notificaties
 
 #### Technische Stack
@@ -130,23 +127,7 @@ Maps: Google Maps API
 Chat: Custom Socket.io solution
 ```
 
-## <a name="klantenpanel"></a>👥 6. Klantenpanel
-
-### 🔐 Authenticatie & Dashboard
-#### Acties
-- [ ] Ontwikkeling van login systeem
-- [ ] Creatie van dashboard interface
-- [ ] Implementatie van bestandsdeling
-- [ ] Setup van notificatiesysteem
-
-#### Technische Stack
-```
-Auth: JWT, Passport.js
-Storage: AWS S3
-Realtime: Socket.io
-```
-
-## <a name="cms"></a>⚙️ 7. CMS Systeem
+## <a name="cms"></a>⚙️ 6. CMS Systeem
 
 ### 📝 Content Management
 #### Acties
@@ -162,7 +143,7 @@ Database: PostgreSQL
 API: REST/GraphQL
 ```
 
-## <a name="tech-opt"></a>🛠️ 8. Technische Optimalisatie
+## <a name="tech-opt"></a>🛠️ 7. Technische Optimalisatie
 
 ### 🚀 Performance
 #### Acties
