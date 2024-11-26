@@ -32,6 +32,12 @@ Performance: Webpack, Code splitting
 - [ ] Optimalisatie van laadtijd en performance
 - [ ] SEO-vriendelijke structuur implementeren
 - [ ] Integratie van CTA's
+- [x] Ontwikkeling van kernpagina's:
+  - Homepage
+  - Diensten pagina
+  - Portfolio pagina
+  - Blog pagina
+  - Contact pagina
 
 #### Technische Stack
 ```
