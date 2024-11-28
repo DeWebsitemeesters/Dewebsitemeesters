@@ -38,6 +38,7 @@ Performance: Webpack, Code splitting
   - Portfolio pagina
   - Blog pagina
   - Contact pagina
+  - Privacy pagina
 
 #### Technische Stack
 ```
@@ -50,28 +51,39 @@ Analytics: Google Analytics
 
 ### 📝 Content Management
 #### Acties
-- [ ] Ontwikkeling van dienstbeschrijvingen
-- [ ] Creatie van prijzen/pakketten overzicht
-- [ ] Implementatie van uitklapbare secties
-- [ ] Toevoegen van visuals en iconen
+- [x] Ontwikkeling van dienstbeschrijvingen
+  - [x] Website Development
+  - [x] Webshop Development
+  - [x] Website Maintenance
+  - [x] Performance Optimization
+  - [x] Security Audit
+  - [x] Design Services
+- [x] Creatie van prijzen/pakketten overzicht
+- [x] Implementatie van uitklapbare secties
+- [x] Toevoegen van visuals en iconen
 
 #### Technische Stack
 ```
-CMS: Strapi
 Frontend: React.js components
 UI: Material-UI, Custom components
+State: React hooks
+Icons: Material Icons
 ```
 
 ### 🎯 Conversie Optimalisatie
 #### Acties
-- [ ] Implementatie van CTA's per dienst
+- [x] Implementatie van CTA's per dienst
+- [x] Responsive card layout
+- [x] Interactive UI elementen
 - [ ] A/B testing setup
 - [ ] Tracking implementatie
 
 #### Technische Stack
 ```
 Testing: Google Optimize
-Analytics: Google Analytics, Hotjar
+Analytics: Google Analytics
+UI: Material-UI
+Animation: CSS Transitions
 ```
 
 ## <a name="portfolio"></a>🖼️ 3. Portfolio Sectie
@@ -168,9 +180,12 @@ Build: Webpack
 
 ### 🔒 Security
 #### Acties
-- [ ] SSL certificaat implementatie
-- [ ] Security headers setup
-- [ ] GDPR compliance implementatie
+- [x] SSL certificaat implementatie
+- [x] Security headers setup
+- [x] GDPR compliance implementatie
+  - [x] Privacy statement pagina
+  - [x] Cookie beleid
+  - [x] Gebruikersrechten informatie
 - [ ] Backup systeem setup
 
 #### Technische Stack
@@ -178,4 +193,5 @@ Build: Webpack
 SSL: Let's Encrypt
 Security: Helmet.js
 Backups: Automated scripts
+GDPR: Custom implementation
 ```
