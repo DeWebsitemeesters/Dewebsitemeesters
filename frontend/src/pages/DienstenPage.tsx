@@ -14,6 +14,17 @@ const services = [
     ],
   },
   {
+    title: 'WordPress Websites',
+    description: `Professionele WordPress websites op maat gemaakt voor uw bedrijf. 
+    We ontwikkelen custom thema's en plugins die perfect aansluiten bij uw wensen.`,
+    features: [
+      'Custom WordPress themas',
+      'Plugin ontwikkeling op maat',
+      'WooCommerce integratie',
+      'WordPress optimalisatie & beveiliging',
+    ],
+  },
+  {
     title: 'E-commerce Solutions',
     description: `Boost uw online verkoop met onze professionele webshop oplossingen. 
     We zorgen voor een veilige en gebruiksvriendelijke winkelervaring.`,

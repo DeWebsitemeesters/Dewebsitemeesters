@@ -17,6 +17,11 @@ const services = [
     link: '/diensten#website-ontwikkeling',
   },
   {
+    title: 'WordPress Websites',
+    description: 'Professionele WordPress websites met custom themas en functionaliteiten.',
+    link: '/diensten#wordpress',
+  },
+  {
     title: 'E-commerce Solutions',
     description: 'Professionele webshops met alle benodigde functionaliteiten.',
     link: '/diensten#e-commerce',

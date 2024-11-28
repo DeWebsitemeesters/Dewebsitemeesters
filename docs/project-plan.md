@@ -28,10 +28,10 @@ Performance: Webpack, Code splitting
 
 ### 🔧 Technische Implementatie
 #### Acties
-- [ ] Implementeren van responsive design
-- [ ] Optimalisatie van laadtijd en performance
-- [ ] SEO-vriendelijke structuur implementeren
-- [ ] Integratie van CTA's
+- [x] Implementeren van responsive design
+- [x] Optimalisatie van laadtijd en performance
+- [x] SEO-vriendelijke structuur implementeren
+- [x] Integratie van CTA's
 - [x] Ontwikkeling van kernpagina's:
   - Homepage
   - Diensten pagina
