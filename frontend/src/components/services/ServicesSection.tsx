@@ -1,32 +1,51 @@
 import React from 'react';
-import { Container, Grid, Typography, Box, Button, useTheme } from '@mui/material';
+import { Container, Typography, Grid, Box, Button, useTheme } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import WebIcon from '@mui/icons-material/Web';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import BrushIcon from '@mui/icons-material/Brush';
+import BuildIcon from '@mui/icons-material/Build';
 import SpeedIcon from '@mui/icons-material/Speed';
+import SecurityIcon from '@mui/icons-material/Security';
+import BrushIcon from '@mui/icons-material/Brush';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const services = [
   {
-    icon: <WebIcon sx={{ fontSize: 48 }} />,
+    icon: <WebIcon sx={{ fontSize: 40 }} />,
     title: 'Website Development',
-    description: 'Professionele websites op maat gemaakt voor uw bedrijf. Modern, responsief en gebruiksvriendelijk.',
+    description: 'Professionele websites op maat met focus op gebruiksvriendelijkheid en conversie.',
+    link: '/diensten/website-development'
   },
   {
-    icon: <ShoppingCartIcon sx={{ fontSize: 48 }} />,
-    title: 'E-commerce Solutions',
-    description: 'Complete webshop oplossingen met alle functionaliteiten die u nodig heeft om online te verkopen.',
+    icon: <ShoppingCartIcon sx={{ fontSize: 40 }} />,
+    title: 'Webshop Development',
+    description: 'Complete e-commerce oplossingen met veilige betalingen en voorraadbeheer.',
+    link: '/diensten/webshop-development'
   },
   {
-    icon: <BrushIcon sx={{ fontSize: 48 }} />,
-    title: 'Web Design',
-    description: 'Prachtige, moderne designs die uw merk versterken en bezoekers converteren naar klanten.',
+    icon: <BuildIcon sx={{ fontSize: 40 }} />,
+    title: 'Website Maintenance',
+    description: 'Zorgeloos onderhoud met regelmatige updates, backups en monitoring.',
+    link: '/diensten/maintenance'
   },
   {
-    icon: <SpeedIcon sx={{ fontSize: 48 }} />,
-    title: 'Optimalisatie',
-    description: 'Snelle, geoptimaliseerde websites die hoog scoren in Google en meer bezoekers trekken.',
+    icon: <SpeedIcon sx={{ fontSize: 40 }} />,
+    title: 'Performance Optimization',
+    description: 'Optimalisatie voor snelheid en betere Google rankings.',
+    link: '/diensten/performance'
   },
+  {
+    icon: <SecurityIcon sx={{ fontSize: 40 }} />,
+    title: 'Security Audit',
+    description: 'Uitgebreide security check en implementatie van beveiligingsmaatregelen.',
+    link: '/diensten/security'
+  },
+  {
+    icon: <BrushIcon sx={{ fontSize: 40 }} />,
+    title: 'Design Services',
+    description: 'Moderne designs die uw merk versterken en conversie verhogen.',
+    link: '/diensten/design'
+  }
 ];
 
 const ServicesSection = () => {
@@ -36,132 +55,113 @@ const ServicesSection = () => {
     <Box
       sx={{
         py: { xs: 8, md: 12 },
-        bgcolor: 'background.paper',
-        position: 'relative',
-        '&::before': {
-          content: '""',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          height: '1px',
-          background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent)',
-        },
+        background: 'linear-gradient(135deg, #F7FAFC 0%, #EDF2F7 100%)',
       }}
     >
       <Container maxWidth="lg">
-        <Box sx={{ textAlign: 'center', mb: { xs: 6, md: 10 } }}>
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
           <Typography
-            variant="h2"
             component="h2"
             sx={{
+              fontSize: { xs: '2rem', md: '3rem' },
+              fontWeight: 700,
               mb: 2,
-              background: 'linear-gradient(45deg, #fff 30%, rgba(255,255,255,0.7) 90%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
+              color: '#2C5282',
             }}
           >
             Onze Diensten
           </Typography>
           <Typography
-            variant="h5"
-            color="text.secondary"
+            variant="h6"
             sx={{
-              maxWidth: '800px',
+              color: '#4A5568',
+              maxWidth: '600px',
               mx: 'auto',
-              mb: 4,
-              fontSize: { xs: '1.1rem', md: '1.25rem' },
-              lineHeight: 1.6,
+              mb: 3,
             }}
           >
-            Van concept tot realisatie, wij bieden complete oplossingen voor uw online aanwezigheid
+            Professionele oplossingen voor uw online succes
           </Typography>
         </Box>
 
         <Grid container spacing={4}>
           {services.map((service, index) => (
-            <Grid item xs={12} md={6} key={index}>
+            <Grid item xs={12} sm={6} md={4} key={index}>
               <Box
                 sx={{
                   height: '100%',
                   p: 4,
                   borderRadius: 2,
-                  bgcolor: 'rgba(255,255,255,0.03)',
+                  background: '#FFFFFF',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
                   transition: 'all 0.3s ease',
-                  cursor: 'pointer',
                   '&:hover': {
-                    bgcolor: 'rgba(255,255,255,0.05)',
-                    transform: 'translateY(-4px)',
+                    transform: 'translateY(-8px)',
+                    boxShadow: '0 8px 30px rgba(0,0,0,0.1)',
                   },
+                  display: 'flex',
+                  flexDirection: 'column',
                 }}
               >
                 <Box
                   sx={{
-                    display: 'inline-flex',
-                    p: 2,
+                    width: 80,
+                    height: 80,
                     borderRadius: 2,
-                    bgcolor: 'rgba(255,255,255,0.05)',
-                    color: 'primary.main',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                     mb: 3,
+                    background: 'linear-gradient(135deg, #EBF4FF 0%, #E6FFFA 100%)',
+                    color: '#2C5282',
                   }}
                 >
                   {service.icon}
                 </Box>
+
                 <Typography
-                  variant="h3"
+                  variant="h5"
                   component="h3"
                   sx={{
-                    mb: 2,
-                    fontSize: { xs: '1.5rem', md: '1.75rem' },
                     fontWeight: 600,
+                    mb: 2,
+                    color: '#2D3748',
                   }}
                 >
                   {service.title}
                 </Typography>
+
                 <Typography
-                  color="text.secondary"
                   sx={{
+                    color: '#4A5568',
                     mb: 3,
-                    fontSize: '1.1rem',
-                    lineHeight: 1.6,
+                    flex: 1,
                   }}
                 >
                   {service.description}
                 </Typography>
+
                 <Button
                   component={RouterLink}
-                  to="/diensten"
-                  variant="text"
+                  to={service.link}
+                  variant="outlined"
+                  endIcon={<ArrowForwardIcon />}
                   sx={{
-                    color: 'primary.main',
-                    p: 0,
+                    color: '#2C5282',
+                    borderColor: 'rgba(44, 82, 130, 0.3)',
                     '&:hover': {
-                      bgcolor: 'transparent',
-                      opacity: 0.8,
+                      borderColor: '#2C5282',
+                      bgcolor: 'rgba(44, 82, 130, 0.05)',
                     },
+                    mt: 'auto',
                   }}
                 >
-                  Lees meer →
+                  Meer informatie
                 </Button>
               </Box>
             </Grid>
           ))}
         </Grid>
-
-        <Box sx={{ textAlign: 'center', mt: { xs: 6, md: 10 } }}>
-          <Button
-            component={RouterLink}
-            to="/contact"
-            variant="contained"
-            size="large"
-            sx={{
-              px: 6,
-              py: 2,
-            }}
-          >
-            Start uw project
-          </Button>
-        </Box>
       </Container>
     </Box>
   );

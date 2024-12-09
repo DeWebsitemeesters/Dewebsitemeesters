@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Typography, Button, Box, Grid, useTheme } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { keyframes } from '@mui/system';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const fadeIn = keyframes`
   from {
@@ -21,16 +22,17 @@ const Hero = () => {
     <Box
       className="hero-section"
       sx={{
-        background: '#000',
+        background: 'linear-gradient(135deg, #2C5282 0%, #1A365D 100%)', // Warm navy blue gradient
         color: 'white',
         position: 'relative',
         overflow: 'hidden',
-        minHeight: '100vh',
+        minHeight: { xs: 'calc(100vh - 64px)', sm: 'calc(100vh - 80px)' },
         display: 'flex',
         alignItems: 'center',
+        pt: { xs: 4, md: 0 },
       }}
     >
-      {/* Background Video */}
+      {/* Decorative Elements */}
       <Box
         sx={{
           position: 'absolute',
@@ -38,117 +40,204 @@ const Hero = () => {
           left: 0,
           right: 0,
           bottom: 0,
+          opacity: 0.1,
+          background: 'url(/pattern.svg)',
+          backgroundSize: 'cover',
           zIndex: 0,
-          '&::after': {
-            content: '""',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: 'linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5))',
-          }
+        }}
+      />
+      
+      {/* Gradient Overlay */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'linear-gradient(45deg, rgba(26, 54, 93, 0.7) 0%, rgba(44, 82, 130, 0.3) 100%)',
+          zIndex: 1,
+        }}
+      />
+
+      <Container 
+        maxWidth="lg" 
+        sx={{ 
+          position: 'relative',
+          zIndex: 2,
+          px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        <Box
-          sx={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: '#000',
-            backgroundImage: 'url(/pattern.svg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.15,
-          }}
-        />
-      </Box>
-
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
-        <Grid container spacing={4} alignItems="center" justifyContent="center" textAlign="center">
-          <Grid item xs={12} md={10} lg={8}>
+        <Grid 
+          container 
+          spacing={{ xs: 4, md: 8 }} 
+          alignItems="center"
+        >
+          <Grid item xs={12} md={7} lg={6}>
             <Box sx={{ animation: `${fadeIn} 1s ease-out` }}>
-              <Typography 
-                variant="h1" 
-                component="h1" 
+              <Typography
+                component="h1"
                 sx={{
+                  fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4rem', lg: '4.5rem' },
                   fontWeight: 700,
-                  fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.5rem' },
                   lineHeight: 1.1,
                   mb: 3,
-                  letterSpacing: '-0.02em'
+                  color: '#FFFFFF',
                 }}
               >
-                Maak uw droomwebsite werkelijkheid
+                Wij maken uw online visie werkelijkheid
               </Typography>
-              <Typography 
-                variant="h2" 
+
+              <Typography
+                variant="h2"
                 sx={{
-                  fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem' },
+                  fontSize: { xs: '1.25rem', sm: '1.5rem' },
                   fontWeight: 400,
                   mb: 4,
-                  opacity: 0.9,
-                  maxWidth: '800px',
-                  margin: '0 auto'
+                  color: 'rgba(255,255,255,0.9)',
+                  maxWidth: '600px',
                 }}
               >
-                Wij creëren prachtige, op maat gemaakte websites die uw merk tot leven brengen en uw online aanwezigheid versterken.
+                Professionele websites die uw merk versterken en resultaten leveren. 
+                Van concept tot realisatie staan wij voor u klaar.
               </Typography>
-              <Box 
-                sx={{ 
-                  display: 'flex', 
-                  gap: 2, 
-                  justifyContent: 'center',
-                  flexWrap: 'wrap'
-                }}
-              >
+
+              <Box sx={{ display: 'flex', gap: 3, flexWrap: { xs: 'wrap', sm: 'nowrap' } }}>
                 <Button
                   component={RouterLink}
                   to="/contact"
                   variant="contained"
                   size="large"
+                  endIcon={<ArrowForwardIcon />}
                   sx={{
-                    bgcolor: 'white',
-                    color: 'black',
+                    bgcolor: '#FFFFFF',
+                    color: '#2C5282',
                     fontSize: '1.125rem',
-                    py: 1.5,
+                    py: 2,
                     px: 4,
-                    borderRadius: '100px',
-                    textTransform: 'none',
+                    borderRadius: '6px',
                     fontWeight: 500,
+                    boxShadow: '0 4px 14px 0 rgba(255,255,255,0.1)',
                     '&:hover': {
-                      bgcolor: 'rgba(255,255,255,0.9)',
-                    }
+                      bgcolor: '#F7FAFC',
+                      transform: 'translateY(-2px)',
+                      boxShadow: '0 6px 20px 0 rgba(255,255,255,0.15)',
+                    },
+                    transition: 'all 0.3s ease',
                   }}
                 >
                   Start uw project
                 </Button>
+
                 <Button
                   component={RouterLink}
                   to="/portfolio"
                   variant="outlined"
                   size="large"
                   sx={{
-                    color: 'white',
-                    borderColor: 'white',
+                    color: '#FFFFFF',
+                    borderColor: 'rgba(255,255,255,0.3)',
                     fontSize: '1.125rem',
-                    py: 1.5,
+                    py: 2,
                     px: 4,
-                    borderRadius: '100px',
-                    textTransform: 'none',
+                    borderRadius: '6px',
                     fontWeight: 500,
+                    borderWidth: '2px',
                     '&:hover': {
-                      borderColor: 'white',
-                      bgcolor: 'rgba(255,255,255,0.1)',
-                    }
+                      borderColor: '#FFFFFF',
+                      borderWidth: '2px',
+                      bgcolor: 'rgba(255,255,255,0.05)',
+                    },
+                    transition: 'all 0.3s ease',
                   }}
                 >
                   Bekijk ons werk
                 </Button>
               </Box>
+
+              {/* USPs */}
+              <Box sx={{ mt: 6, display: 'flex', gap: 4, flexWrap: 'wrap' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                  <Box
+                    sx={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: '50%',
+                      bgcolor: 'rgba(255,255,255,0.1)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '1.25rem',
+                    }}
+                  >
+                    ✨
+                  </Box>
+                  <Typography sx={{ color: 'rgba(255,255,255,0.9)' }}>
+                    Modern Design
+                  </Typography>
+                </Box>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                  <Box
+                    sx={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: '50%',
+                      bgcolor: 'rgba(255,255,255,0.1)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '1.25rem',
+                    }}
+                  >
+                    🚀
+                  </Box>
+                  <Typography sx={{ color: 'rgba(255,255,255,0.9)' }}>
+                    Snelle Performance
+                  </Typography>
+                </Box>
+              </Box>
             </Box>
+          </Grid>
+
+          {/* Right side decorative element */}
+          <Grid item xs={12} md={5} lg={6} sx={{ display: { xs: 'none', md: 'block' } }}>
+            <Box
+              sx={{
+                position: 'relative',
+                height: '500px',
+                width: '100%',
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  top: '10%',
+                  right: '10%',
+                  width: '80%',
+                  height: '80%',
+                  background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
+                  borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
+                  animation: 'float 6s ease-in-out infinite',
+                },
+                '&::after': {
+                  content: '""',
+                  position: 'absolute',
+                  top: '20%',
+                  right: '20%',
+                  width: '60%',
+                  height: '60%',
+                  background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)',
+                  borderRadius: '70% 30% 30% 70% / 70% 70% 30% 30%',
+                  animation: 'float 8s ease-in-out infinite reverse',
+                },
+                '@keyframes float': {
+                  '0%, 100%': {
+                    transform: 'translateY(0)',
+                  },
+                  '50%': {
+                    transform: 'translateY(-20px)',
+                  },
+                },
+              }}
+            />
           </Grid>
         </Grid>
       </Container>

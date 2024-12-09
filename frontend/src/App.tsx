@@ -109,9 +109,21 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box display="flex" flexDirection="column" minHeight="100vh" bgcolor="background.default">
+      <Box sx={{ 
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+      }}>
         <Header />
-        <Box component="main" flexGrow={1}>
+        <Box 
+          component="main" 
+          sx={{ 
+            flex: 1,
+            mt: { xs: '64px', sm: '80px' }, 
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/diensten" element={<DienstenPage />} />
@@ -123,8 +135,8 @@ function App() {
           </Routes>
         </Box>
         <Footer />
-        <CookieConsent />
       </Box>
+      <CookieConsent />
     </ThemeProvider>
   );
 }
