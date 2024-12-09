@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { Box } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -11,30 +11,97 @@ import PortfolioPage from './pages/PortfolioPage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPage from './pages/PrivacyPage';
+import CookiePolicyPage from './pages/CookiePolicyPage';
 
 // Components
 import Header from './components/layout/Header';
-import Footer from './components/Footer/Footer';
+import Footer from './components/layout/Footer';
+import CookieConsent from './components/common/CookieConsent';
 
 const theme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
-      main: '#1976d2',
+      main: '#ffffff',
     },
     secondary: {
-      main: '#dc004e',
+      main: '#000000',
+    },
+    background: {
+      default: '#000000',
+      paper: '#111111',
+    },
+    text: {
+      primary: '#ffffff',
+      secondary: 'rgba(255, 255, 255, 0.7)',
     },
   },
   typography: {
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-    ].join(','),
+    fontFamily: '"Inter", "Helvetica Neue", Arial, sans-serif',
+    h1: {
+      fontSize: '4.5rem',
+      fontWeight: 700,
+      letterSpacing: '-0.02em',
+      lineHeight: 1.1,
+    },
+    h2: {
+      fontSize: '3rem',
+      fontWeight: 600,
+      letterSpacing: '-0.01em',
+      lineHeight: 1.2,
+    },
+    h3: {
+      fontSize: '2rem',
+      fontWeight: 600,
+      letterSpacing: '-0.01em',
+      lineHeight: 1.3,
+    },
+    body1: {
+      fontSize: '1.125rem',
+      lineHeight: 1.6,
+    },
+    button: {
+      textTransform: 'none',
+      fontWeight: 500,
+    },
+  },
+  shape: {
+    borderRadius: 12,
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 100,
+          padding: '12px 24px',
+          fontSize: '1rem',
+        },
+        contained: {
+          backgroundColor: '#ffffff',
+          color: '#000000',
+          '&:hover': {
+            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          },
+        },
+        outlined: {
+          borderColor: '#ffffff',
+          color: '#ffffff',
+          '&:hover': {
+            borderColor: '#ffffff',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+          },
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'transparent',
+          boxShadow: 'none',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+        },
+      },
+    },
   },
 });
 
@@ -42,13 +109,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ 
-        display: 'flex', 
-        flexDirection: 'column',
-        minHeight: '100vh'
-      }}>
+      <Box display="flex" flexDirection="column" minHeight="100vh" bgcolor="background.default">
         <Header />
-        <Box component="main" sx={{ flexGrow: 1 }}>
+        <Box component="main" flexGrow={1}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/diensten" element={<DienstenPage />} />
@@ -56,9 +119,11 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/cookie-policy" element={<CookiePolicyPage />} />
           </Routes>
         </Box>
         <Footer />
+        <CookieConsent />
       </Box>
     </ThemeProvider>
   );
