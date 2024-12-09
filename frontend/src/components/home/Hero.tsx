@@ -50,19 +50,20 @@ const Hero = () => {
           }
         }}
       >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: '#000',
+            backgroundImage: 'url(/pattern.svg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.15,
           }}
-        >
-          <source src="/videos/hero-background.mp4" type="video/mp4" />
-        </video>
+        />
       </Box>
 
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
