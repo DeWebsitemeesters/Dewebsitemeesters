@@ -4,9 +4,12 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
@@ -15,20 +18,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: './frontend/package-lock.json'
 
-      - name: Install and Build
+      - name: Install Dependencies
+        working-directory: ./frontend
         run: |
-          cd frontend
-          npm ci
-          npm run build
+          npm install
+          npm install react-scripts --save
 
-      - name: Deploy
+      - name: Build
+        working-directory: ./frontend
+        run: |
+          CI=false npm run build
+
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: frontend/build
+          branch: gh-pages
+          clean: true
