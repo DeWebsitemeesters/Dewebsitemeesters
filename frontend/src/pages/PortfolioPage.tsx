@@ -6,7 +6,6 @@ import {
   Card,
   CardContent,
   CardMedia,
-  Button,
   Box,
   Chip,
   Dialog,
@@ -20,8 +19,6 @@ import {
   MenuItem,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 // Import images
 import ecommerceImg from '../assets/portfolio/ecommerce.jpg';
