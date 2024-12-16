@@ -78,33 +78,44 @@ Performance: Webpack, Code splitting ✅
 
 ### 📸 Galerij Functionaliteit
 #### Acties
+- [x] Setup van basis portfolio structuur
 - [ ] Ontwikkeling van projecten galerij
 - [ ] Creatie van lightbox weergave
 - [ ] Implementatie van filters en sortering
+- [ ] Toevoegen van project metadata
+- [ ] Implementatie van lazy loading voor afbeeldingen
 
 ### 📊 Case Studies
 #### Acties
 - [ ] Ontwikkeling van case study template
 - [ ] Implementatie van testimonial systeem
 - [ ] Integratie met CMS
+- [ ] Toevoegen van resultaat metrics
+- [ ] Implementatie van sociale deel knoppen
 
-## <a name="blog"></a>📚 4. Blog/Kennisbank - GEPLAND 🚧
+## <a name="blog"></a>📚 4. Blog/Kennisbank - IN ONTWIKKELING 🚧
 
 ### 📖 Content System
 #### Acties
+- [x] Basis blog structuur opgezet
 - [ ] Ontwikkeling van artikel systeem
 - [ ] Implementatie van categorieën en tags
 - [ ] Creatie van zoekfunctionaliteit
 - [ ] Implementatie van reactiesysteem
+- [ ] RSS feed integratie
+- [ ] Sociale media integratie
 
-## <a name="contact"></a>📞 5. Contact Functionaliteit - GEPLAND 🚧
+## <a name="contact"></a>📞 5. Contact Functionaliteit - IN ONTWIKKELING 🚧
 
 ### 📨 Contact Features
 #### Acties
+- [x] Basis contact pagina opgezet
 - [ ] Ontwikkeling van contactformulier
 - [ ] Implementatie van Google Maps
 - [ ] Setup van email notificaties
 - [ ] Live chat integratie
+- [ ] Implementatie van afspraken planner
+- [ ] Setup van auto-responder
 
 ## <a name="cms"></a>⚙️ 6. CMS Systeem - GEPLAND 🚧
 
@@ -140,18 +151,24 @@ Performance: Webpack, Code splitting ✅
 - Homepage ontwikkeling
 - Diensten sectie
 - Basis technische setup
+- Privacy en GDPR implementatie
 
 ### Fase 2 - HUIDIG 🚧
-- Portfolio sectie
-- Contact functionaliteit
+- Portfolio sectie ontwikkeling
+- Blog basis structuur
+- Contact systeem setup
 - Performance optimalisatie
 
 ### Fase 3 - GEPLAND 📅
-- Blog/Kennisbank
+- Blog/Kennisbank voltooiing
 - CMS integratie
 - Security implementatie
+- Contact functionaliteit voltooiing
 
 ### Fase 4 - TOEKOMST 🔮
 - A/B testing
 - Analytics integratie
 - Marketing automatisering
+- Uitgebreide SEO optimalisatie
+- Nieuwsbrief systeem
+- Klanten dashboard
