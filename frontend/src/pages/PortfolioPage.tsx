@@ -23,6 +23,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
+// Import images
+import ecommerceImg from '../assets/portfolio/ecommerce.jpg';
+import restaurantImg from '../assets/portfolio/restaurant.jpg';
+import realestateImg from '../assets/portfolio/realestate.jpg';
+import fitnessImg from '../assets/portfolio/fitness.jpg';
+
 interface Project {
   id: number;
   title: string;
@@ -46,7 +52,7 @@ const projects: Project[] = [
     id: 1,
     title: 'E-commerce Platform',
     description: 'Moderne webshop voor een lokale modewinkel',
-    image: 'https://source.unsplash.com/800x600/?ecommerce,shop',
+    image: ecommerceImg,
     technologies: ['React', 'Node.js', 'MongoDB'],
     category: 'Webshop',
     challenge: 'De klant had behoefte aan een moderne webshop die zowel op desktop als mobiel perfect werkt.',
@@ -63,7 +69,7 @@ const projects: Project[] = [
     id: 2,
     title: 'Restaurant Website',
     description: 'Stijlvolle website voor een lokaal restaurant',
-    image: 'https://source.unsplash.com/800x600/?restaurant,food',
+    image: restaurantImg,
     technologies: ['React', 'TypeScript', 'Strapi'],
     category: 'Website',
     challenge: 'Het restaurant wilde een website waar klanten eenvoudig kunnen reserveren.',
@@ -80,7 +86,7 @@ const projects: Project[] = [
     id: 3,
     title: 'Vastgoed Platform',
     description: 'Custom vastgoed management systeem',
-    image: 'https://source.unsplash.com/800x600/?realestate,building',
+    image: realestateImg,
     technologies: ['React', 'Django', 'PostgreSQL'],
     category: 'Platform',
     challenge: 'De klant had behoefte aan een custom vastgoed management systeem.',
@@ -91,7 +97,7 @@ const projects: Project[] = [
     id: 4,
     title: 'Sport App',
     description: 'Mobiele app voor sportschool management',
-    image: 'https://source.unsplash.com/800x600/?fitness,gym',
+    image: fitnessImg,
     technologies: ['React Native', 'Firebase', 'Node.js'],
     category: 'App',
     challenge: 'De sportschool wilde een mobiele app voor het beheer van hun lessen en trainers.',
